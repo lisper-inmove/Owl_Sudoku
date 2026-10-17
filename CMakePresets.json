@@ -1,0 +1,52 @@
+{
+	"version": 6,
+	"cmakeMinimumRequired": {
+		"major": 3,
+		"minor": 25,
+		"patch": 0
+	},
+	"configurePresets": [
+		{
+			"name": "ninja",
+			"displayName": "Ninja Multi-Config (MSVC x64)",
+			"generator": "Ninja Multi-Config",
+			"binaryDir": "${sourceDir}/build",
+			"cacheVariables": {
+				"SIV3D_ROOT": "C:/Software/OpenSiv3D_0.6.16",
+				"THIRD_PARTY_SOURCE_ROOT": "F:/codes/sources",
+				"CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+				"CMAKE_CONFIGURATION_TYPES": "Debug;Release"
+			}
+		}
+	],
+	"buildPresets": [
+		{
+			"name": "debug",
+			"configurePreset": "ninja",
+			"configuration": "Debug"
+		},
+		{
+			"name": "release",
+			"configurePreset": "ninja",
+			"configuration": "Release"
+		}
+	],
+	"testPresets": [
+		{
+			"name": "test-debug",
+			"configurePreset": "ninja",
+			"configuration": "Debug",
+			"output": {
+				"outputOnFailure": true
+			}
+		},
+		{
+			"name": "test-release",
+			"configurePreset": "ninja",
+			"configuration": "Release",
+			"output": {
+				"outputOnFailure": true
+			}
+		}
+	]
+}

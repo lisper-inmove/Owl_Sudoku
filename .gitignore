@@ -1,0 +1,91 @@
+# ---------------------------------------------------------------------------
+# Build output
+# ---------------------------------------------------------------------------
+/build/
+/build-*/
+/out/
+/Intermediate/
+/compile_commands.json
+
+# In-tree CMake configuration files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+install_manifest.txt
+
+# User-specific CMake presets
+CMakeUserPresets.json
+
+# ---------------------------------------------------------------------------
+# Visual Studio
+# ---------------------------------------------------------------------------
+.vs/
+*.sln
+*.slnx
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.suo
+*.user
+*.VC.db
+*.VC.opendb
+*.aps
+*.ncb
+*.sdf
+*.opensdf
+
+# ---------------------------------------------------------------------------
+# Visual Studio Code
+# ---------------------------------------------------------------------------
+# The shared .vscode configuration is part of the template and should be kept.
+.vscode/*.log
+.vscode/ipch/
+
+# ---------------------------------------------------------------------------
+# Compiler and linker output outside the build directories
+# ---------------------------------------------------------------------------
+*.obj
+*.o
+*.pch
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.idb
+*.ipdb
+*.iobj
+*.res
+
+# The build copies the application executable into App/.
+/App/*.exe
+/App/*.pdb
+
+# Note: *.dll is intentionally not ignored because App/dll/ contains
+# runtime dependencies that belong to the project.
+
+# ---------------------------------------------------------------------------
+# Siv3D runtime output
+# ---------------------------------------------------------------------------
+/App/AS_DEBUG/
+
+# ---------------------------------------------------------------------------
+# Logs and temporary files
+# ---------------------------------------------------------------------------
+*.log
+*.tmp
+*.temp
+
+# ---------------------------------------------------------------------------
+# OS-generated files
+# ---------------------------------------------------------------------------
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ---------------------------------------------------------------------------
+# Local tooling state
+# ---------------------------------------------------------------------------
+.remember/
+.claude/

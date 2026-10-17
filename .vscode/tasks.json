@@ -1,0 +1,90 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "CMake: Configure",
+			"type": "shell",
+			"command": "${workspaceFolder}/tools/cmake-msvc.cmd",
+			"args": [
+				"--preset",
+				"ninja"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "CMake: Build Debug",
+			"type": "shell",
+			"command": "${workspaceFolder}/tools/cmake-msvc.cmd",
+			"args": [
+				"--build",
+				"--preset",
+				"debug"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"dependsOn": "CMake: Configure",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "CMake: Build Release",
+			"type": "shell",
+			"command": "${workspaceFolder}/tools/cmake-msvc.cmd",
+			"args": [
+				"--build",
+				"--preset",
+				"release"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"dependsOn": "CMake: Configure",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "CMake: Test Debug",
+			"type": "shell",
+			"command": "ctest",
+			"args": [
+				"--preset",
+				"test-debug"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"dependsOn": "CMake: Build Debug",
+			"problemMatcher": [],
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "CMake: Test Release",
+			"type": "shell",
+			"command": "ctest",
+			"args": [
+				"--preset",
+				"test-release"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"dependsOn": "CMake: Build Release",
+			"problemMatcher": [],
+			"group": "test"
+		}
+	]
+}

@@ -1,0 +1,41 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug (MSVC)",
+			"type": "cppvsdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/App/Siv3D_Template(debug).exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}/App",
+			"environment": [],
+			"symbolSearchPath": "${workspaceFolder}/Intermediate/Siv3D_Template/Debug",
+			"preLaunchTask": "CMake: Build Debug"
+		},
+		{
+			"name": "Release (MSVC)",
+			"type": "cppvsdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/App/Siv3D_Template.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}/App",
+			"environment": [],
+			"symbolSearchPath": "${workspaceFolder}/Intermediate/Siv3D_Template/Release",
+			"preLaunchTask": "CMake: Build Release"
+		},
+		{
+			"name": "Debug Tests (MSVC)",
+			"type": "cppvsdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/Intermediate/Siv3D_Template/Tests/Debug/siv3d_template_tests.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"symbolSearchPath": "${workspaceFolder}/Intermediate/Siv3D_Template/Tests/Debug",
+			"preLaunchTask": "CMake: Build Debug"
+		}
+	]
+}
