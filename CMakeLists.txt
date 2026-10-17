@@ -88,6 +88,7 @@ add_subdirectory(
 add_library(siv3d_template_core STATIC
 	src/config.cc
 	src/logging.cc
+	src/sudoku.cc
 	src/version.cc
 )
 
@@ -214,6 +215,7 @@ if(SIV3D_TEMPLATE_BUILD_TESTS)
 		tests/main.cpp
 		tests/config_test.cc
 		tests/logging_test.cc
+		tests/sudoku_test.cc
 		tests/version_test.cc
 	)
 
